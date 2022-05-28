@@ -1,0 +1,41 @@
+{
+  "name": "gmail-google-home-notify",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "author": "Yusuke Fujiki <yusuke@fujikkys.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "node -r esbuild-register src/index.ts",
+    "start": "node dist/index.js",
+    "build": "rimraf dist && tsc",
+    "lint": "run-s lint:*",
+    "lint:tsc": "tsc --project tsconfig.tsc.json",
+    "lint:eslint": "eslint --cache './**/*.{js,jsx,ts,tsx}'",
+    "lint:prettier": "prettier --check './**/*.{js,jsx,ts,tsx}'",
+    "fix": "run-s fix:prettier fix:eslint",
+    "fix:eslint": "yarn lint:eslint --fix",
+    "fix:prettier": "yarn lint:prettier --write"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "yarn build && git add ."
+  },
+  "dependencies": {
+    "google-auth-library": "^8.0.2",
+    "google-home-player": "^2.0.0",
+    "googleapis": "^100.0.0"
+  },
+  "devDependencies": {
+    "@tsconfig/node16-strictest": "^1.0.1",
+    "@types/jest": "^27.5.1",
+    "@types/node-cron": "^3.0.1",
+    "esbuild": "^0.14.40",
+    "esbuild-register": "^3.3.2",
+    "eslint": "^8.16.0",
+    "eslint-config-timetree": "^1.7.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "simple-git-hooks": "^2.8.0",
+    "typescript": "^4.7.2"
+  }
+}
