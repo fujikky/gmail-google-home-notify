@@ -17,7 +17,7 @@
     "fix:prettier": "yarn lint:prettier --write"
   },
   "simple-git-hooks": {
-    "pre-commit": "yarn build && git add ."
+    "pre-commit": "yarn build && git add dist"
   },
   "dependencies": {
     "google-auth-library": "^8.0.2",
