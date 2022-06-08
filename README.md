@@ -24,7 +24,11 @@ Works on Raspberry Pi.
 
 Running this script will check mail only once. Use cron to run it periodically.
 
-Edit cron configuration with `crontab -e`.
+```bash
+$ sudo touch /var/log/gmail-google-home-notify.log
+$ sudo chmod 666 /var/log/gmail-google-home-notify.log
+$ crontab edit -e
+```
 
 The following example will run the script once per minute.
 
