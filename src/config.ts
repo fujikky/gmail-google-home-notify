@@ -14,7 +14,7 @@ export type Config = {
   readonly conditions: readonly SpeechTextCondition[];
 };
 
-const CONFIG_PATH = path.join(process.cwd(), "home-notify.config.js");
+const CONFIG_PATH = path.join(process.cwd(), "config.js");
 
 export const loadConfig = async () =>
   (await import(CONFIG_PATH)).default as Config;

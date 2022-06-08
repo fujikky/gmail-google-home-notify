@@ -3,5 +3,5 @@
   "compilerOptions": {
     "noEmit": true
   },
-  "include": ["home-notify.config.js", "home-notify.config.sample.js"]
+  "include": ["config.js", "config.sample.js"]
 }

@@ -13,8 +13,8 @@ Works on Raspberry Pi.
 1. Create a project in [Google Cloud Console](https://console.cloud.google.com) and set up OAuth authentication.
 2. Enable the [Gmail API](https://console.cloud.google.com/apis/api/gmail.googleapis.com) in your project.
 3. Clone repo.
-4. Copy `home-notify.config.sample.js` to `home-notify.config.js` .
-5. Edit `home-notify.config.js` .
+4. Copy `config.sample.js` to `config.js` .
+5. Edit `config.js` .
 6. Run `yarn --production` .
 7. Run `yarn start` .
 

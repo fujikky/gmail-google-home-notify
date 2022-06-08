@@ -28,6 +28,6 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.loadConfig = void 0;
 const node_path_1 = __importDefault(require("node:path"));
-const CONFIG_PATH = node_path_1.default.join(process.cwd(), "home-notify.config.js");
+const CONFIG_PATH = node_path_1.default.join(process.cwd(), "config.js");
 const loadConfig = async () => (await Promise.resolve().then(() => __importStar(require(CONFIG_PATH)))).default;
 exports.loadConfig = loadConfig;

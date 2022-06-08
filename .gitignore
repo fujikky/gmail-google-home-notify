@@ -147,4 +147,4 @@ dist
 !dist
 .credentials.json
 .timestamp
-home-notify.config.js
+config.js
