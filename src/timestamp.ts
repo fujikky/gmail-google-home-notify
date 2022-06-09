@@ -3,11 +3,7 @@ import path from "node:path";
 
 const TIMESTAMP_PATH = path.join(process.cwd(), ".timestamp");
 
-export const createTimestamp = (beforeMinutes: number = 0) => {
-  const d = new Date();
-  d.setMinutes(d.getMinutes() - beforeMinutes);
-  return Math.floor(d.getTime() / 1000);
-};
+export const createTimestamp = () => Math.floor(new Date().getTime() / 1000);
 
 export const loadTimestamp = async () => {
   try {
@@ -16,7 +12,7 @@ export const loadTimestamp = async () => {
     if (Number.isNaN(ts)) throw new Error(`${file} is not a number`);
     return ts;
   } catch (e) {
-    const ts = createTimestamp(5);
+    const ts = createTimestamp();
     await saveTimestamp(ts);
     return ts;
   }

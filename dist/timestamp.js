@@ -7,11 +7,7 @@ exports.saveTimestamp = exports.loadTimestamp = exports.createTimestamp = void 0
 const promises_1 = __importDefault(require("node:fs/promises"));
 const node_path_1 = __importDefault(require("node:path"));
 const TIMESTAMP_PATH = node_path_1.default.join(process.cwd(), ".timestamp");
-const createTimestamp = (beforeMinutes = 0) => {
-    const d = new Date();
-    d.setMinutes(d.getMinutes() - beforeMinutes);
-    return Math.floor(d.getTime() / 1000);
-};
+const createTimestamp = () => Math.floor(new Date().getTime() / 1000);
 exports.createTimestamp = createTimestamp;
 const loadTimestamp = async () => {
     try {
@@ -22,7 +18,7 @@ const loadTimestamp = async () => {
         return ts;
     }
     catch (e) {
-        const ts = (0, exports.createTimestamp)(5);
+        const ts = (0, exports.createTimestamp)();
         await (0, exports.saveTimestamp)(ts);
         return ts;
     }
