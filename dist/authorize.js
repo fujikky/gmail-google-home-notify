@@ -19,20 +19,27 @@ const prompt = (message) => new Promise((resolve) => {
         rl.close();
     });
 });
+const loadTokens = async () => {
+    try {
+        return JSON.parse(await promises_1.default.readFile(TOKEN_PATH, "utf-8"));
+    }
+    catch {
+        return null;
+    }
+};
 const authorize = async (config) => {
     const client = new googleapis_1.google.auth.OAuth2({
         clientId: config.googleClientId,
         clientSecret: config.googleClientSecret,
         redirectUri: "urn:ietf:wg:oauth:2.0:oob",
     });
-    client.on("tokens", async (credentials) => {
-        await promises_1.default.writeFile(TOKEN_PATH, JSON.stringify(credentials));
+    client.on("tokens", async (tokens) => {
+        // merge tokens
+        const oldTokens = (await loadTokens()) || {};
+        await promises_1.default.writeFile(TOKEN_PATH, JSON.stringify({ ...oldTokens, ...tokens }));
     });
-    try {
-        const token = JSON.parse(await promises_1.default.readFile(TOKEN_PATH, { encoding: "utf-8" }));
-        client.credentials = token;
-    }
-    catch {
+    let tokens = await loadTokens();
+    if (!tokens) {
         const url = client.generateAuthUrl({
             access_type: "offline",
             scope: "https://www.googleapis.com/auth/gmail.readonly",
@@ -40,8 +47,9 @@ const authorize = async (config) => {
         const code = await prompt(`${url}\n\n` +
             "Open the following URL in your browser, then paste the resulting authorization code below: ");
         const result = await client.getToken(code);
-        client.credentials = result.tokens;
+        tokens = result.tokens;
     }
+    client.setCredentials(tokens);
     return client;
 };
 exports.authorize = authorize;
