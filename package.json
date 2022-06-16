@@ -27,7 +27,7 @@
   "devDependencies": {
     "@tsconfig/node16-strictest": "1.0.2",
     "@types/jest": "28.1.1",
-    "esbuild": "0.14.43",
+    "esbuild": "0.14.44",
     "esbuild-register": "3.3.3",
     "eslint": "8.17.0",
     "eslint-config-timetree": "1.7.0",
