@@ -17,11 +17,16 @@ import { createTimestamp, loadTimestamp, saveTimestamp } from "./timestamp";
   const text = createSpeechText(message, config);
   if (!text) return;
 
-  const googleHome = new GoogleHomePlayer(
-    config.googleHomeIp,
-    config.speechLanguage
+  const ips =
+    typeof config.googleHomeIp === "string"
+      ? [config.googleHomeIp]
+      : config.googleHomeIp;
+  await Promise.all(
+    ips.map(async (ip) => {
+      const player = new GoogleHomePlayer(ip, config.speechLanguage);
+      await player.say(text);
+    })
   );
-  await googleHome.say(text);
 
   await saveTimestamp(nextTs);
 })();

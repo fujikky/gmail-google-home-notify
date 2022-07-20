@@ -8,7 +8,7 @@ export type SpeechTextCondition = {
 export type Config = {
   readonly googleClientId: string;
   readonly googleClientSecret: string;
-  readonly googleHomeIp: string;
+  readonly googleHomeIp: string | readonly string[];
   readonly speechLanguage: string;
   readonly emails: readonly string[];
   readonly conditions: readonly SpeechTextCondition[];

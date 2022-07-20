@@ -18,7 +18,12 @@ const timestamp_1 = require("./timestamp");
     const text = (0, createSpeechText_1.createSpeechText)(message, config);
     if (!text)
         return;
-    const googleHome = new google_home_player_1.default(config.googleHomeIp, config.speechLanguage);
-    await googleHome.say(text);
+    const ips = typeof config.googleHomeIp === "string"
+        ? [config.googleHomeIp]
+        : config.googleHomeIp;
+    await Promise.all(ips.map(async (ip) => {
+        const player = new google_home_player_1.default(ip, config.speechLanguage);
+        await player.say(text);
+    }));
     await (0, timestamp_1.saveTimestamp)(nextTs);
 })();
