@@ -22,7 +22,7 @@
   "dependencies": {
     "google-auth-library": "^8.0.2",
     "google-home-player": "^2.0.0",
-    "googleapis": "^106.0.0"
+    "googleapis": "^107.0.0"
   },
   "devDependencies": {
     "@tsconfig/node16-strictest": "1.0.3",
