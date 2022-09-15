@@ -1,4 +1,5 @@
 import GoogleHomePlayer from "google-home-player";
+import ping from "ping";
 
 import { loadConfig } from "./config";
 import { createSpeechText } from "./createSpeechText";
@@ -24,6 +25,9 @@ import { createTimestamp, loadTimestamp, saveTimestamp } from "./timestamp";
 
   for (const ip of ips) {
     try {
+      const { alive } = await ping.promise.probe(ip);
+      if (!alive) continue;
+
       const player = new GoogleHomePlayer(ip, config.speechLanguage);
       await player.say(text);
     } catch (e) {

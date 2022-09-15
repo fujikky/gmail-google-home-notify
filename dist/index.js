@@ -4,6 +4,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const google_home_player_1 = __importDefault(require("google-home-player"));
+const ping_1 = __importDefault(require("ping"));
 const config_1 = require("./config");
 const createSpeechText_1 = require("./createSpeechText");
 const fetchMessage_1 = require("./fetchMessage");
@@ -23,6 +24,9 @@ const timestamp_1 = require("./timestamp");
         : config.googleHomeIp;
     for (const ip of ips) {
         try {
+            const { alive } = await ping_1.default.promise.probe(ip);
+            if (!alive)
+                continue;
             const player = new google_home_player_1.default(ip, config.speechLanguage);
             await player.say(text);
         }

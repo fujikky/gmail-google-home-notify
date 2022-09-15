@@ -22,11 +22,13 @@
   "dependencies": {
     "google-auth-library": "^8.0.2",
     "google-home-player": "^2.0.0",
-    "googleapis": "^107.0.0"
+    "googleapis": "^107.0.0",
+    "ping": "^0.4.2"
   },
   "devDependencies": {
     "@tsconfig/node16-strictest": "1.0.3",
     "@types/jest": "29.0.2",
+    "@types/ping": "0.4.1",
     "esbuild": "0.15.7",
     "esbuild-register": "3.3.3",
     "eslint": "8.23.1",
