@@ -23,8 +23,12 @@ import { createTimestamp, loadTimestamp, saveTimestamp } from "./timestamp";
       : config.googleHomeIp;
   await Promise.all(
     ips.map(async (ip) => {
-      const player = new GoogleHomePlayer(ip, config.speechLanguage);
-      await player.say(text);
+      try {
+        const player = new GoogleHomePlayer(ip, config.speechLanguage);
+        await player.say(text);
+      } catch (e) {
+        // Ignore failed broadcasts to Google Home
+      }
     })
   );
 
