@@ -21,9 +21,14 @@ const timestamp_1 = require("./timestamp");
     const ips = typeof config.googleHomeIp === "string"
         ? [config.googleHomeIp]
         : config.googleHomeIp;
-    await Promise.all(ips.map(async (ip) => {
-        const player = new google_home_player_1.default(ip, config.speechLanguage);
-        await player.say(text);
-    }));
+    for (const ip of ips) {
+        try {
+            const player = new google_home_player_1.default(ip, config.speechLanguage);
+            await player.say(text);
+        }
+        catch (e) {
+            // Ignore failed broadcasts to Google Home
+        }
+    }
     await (0, timestamp_1.saveTimestamp)(nextTs);
 })();

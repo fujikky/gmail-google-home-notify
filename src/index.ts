@@ -21,12 +21,15 @@ import { createTimestamp, loadTimestamp, saveTimestamp } from "./timestamp";
     typeof config.googleHomeIp === "string"
       ? [config.googleHomeIp]
       : config.googleHomeIp;
-  await Promise.all(
-    ips.map(async (ip) => {
+
+  for (const ip of ips) {
+    try {
       const player = new GoogleHomePlayer(ip, config.speechLanguage);
       await player.say(text);
-    })
-  );
+    } catch (e) {
+      // Ignore failed broadcasts to Google Home
+    }
+  }
 
   await saveTimestamp(nextTs);
 })();
