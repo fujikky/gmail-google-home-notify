@@ -5,7 +5,7 @@ Works on Raspberry Pi.
 
 ## Requirements
 
-- Node.js v16
+- Node.js v18
 - Yarn
 
 ## Get started

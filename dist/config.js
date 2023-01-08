@@ -29,5 +29,5 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.loadConfig = void 0;
 const node_path_1 = __importDefault(require("node:path"));
 const CONFIG_PATH = node_path_1.default.join(process.cwd(), "config.js");
-const loadConfig = async () => (await Promise.resolve().then(() => __importStar(require(CONFIG_PATH)))).default;
+const loadConfig = async () => { var _a; return (await (_a = CONFIG_PATH, Promise.resolve().then(() => __importStar(require(_a))))).default; };
 exports.loadConfig = loadConfig;
