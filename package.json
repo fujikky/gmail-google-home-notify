@@ -29,7 +29,7 @@
     "@tsconfig/node16-strictest": "1.0.4",
     "@types/jest": "29.2.5",
     "@types/ping": "0.4.1",
-    "esbuild": "0.16.17",
+    "esbuild": "0.17.0",
     "esbuild-register": "3.4.2",
     "eslint": "8.31.0",
     "eslint-config-timetree": "1.8.0",
