@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@tsconfig/node16-strictest": "1.0.4",
-    "@types/jest": "29.4.2",
+    "@types/jest": "29.4.4",
     "@types/ping": "0.4.1",
     "esbuild": "0.17.11",
     "esbuild-register": "3.4.2",
