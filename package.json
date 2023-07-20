@@ -20,7 +20,7 @@
     "pre-commit": "yarn build && git add dist"
   },
   "dependencies": {
-    "google-auth-library": "^8.0.2",
+    "google-auth-library": "^9.0.0",
     "google-home-player": "^2.0.0",
     "googleapis": "^122.0.0",
     "ping": "^0.4.2"
