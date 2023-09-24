@@ -371,10 +371,10 @@
   resolved "https://registry.yarnpkg.com/@types/node/-/node-20.6.2.tgz#a065925409f59657022e9063275cd0b9bd7e1b12"
   integrity sha512-Y+/1vGBHV/cYk6OI1Na/LHzwnlNCAfU3ZNGrc1LdRe/LAIbdDPTTv/HU3M7yXN448aTVDq3eKRm2cg7iKLb8gw==
 
-"@types/ping@0.4.1":
-  version "0.4.1"
-  resolved "https://registry.yarnpkg.com/@types/ping/-/ping-0.4.1.tgz#98f9c20be196ca6c3c2639528b7e1827b17e84be"
-  integrity sha512-q/D+xQvoqrHvntvz2A0Pb0ImYwnN3zakluUp8O2qoogGoVMVbdY2K/ulxHcCh9TzYzVoojayHBa9gYQDIZ4v0A==
+"@types/ping@0.4.2":
+  version "0.4.2"
+  resolved "https://registry.yarnpkg.com/@types/ping/-/ping-0.4.2.tgz#d7e05f1b8eb4607f9e98f8167abb79148bddcd4a"
+  integrity sha512-5WAzkazMQP7EBDfGtfOV8Tkh7SoXhyo8UYXsR7G7RCRihyM5Ds2zbxgrS+eI0bMqL/GPRO7FcJCK7czoxQmXNw==
 
 "@types/semver@^7.3.12":
   version "7.5.2"
