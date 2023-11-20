@@ -367,9 +367,9 @@
   integrity sha512-MqTGEo5bj5t157U6fA/BiDynNkn0YknVdh48CMPkTSpFTVmvao5UQmm7uEF6xBEo7qIMAlY/JSleYaE6VOdpaA==
 
 "@types/node@*", "@types/node@>=13.7.0":
-  version "20.9.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.0.tgz#bfcdc230583aeb891cf51e73cfdaacdd8deae298"
-  integrity sha512-nekiGu2NDb1BcVofVcEKMIwzlx4NjHlcjhoxxKBNLtz15Y1z7MYf549DFvkHSId02Ax6kGwWntIBPC3l/JZcmw==
+  version "20.9.2"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.9.2.tgz#002815c8e87fe0c9369121c78b52e800fadc0ac6"
+  integrity sha512-WHZXKFCEyIUJzAwh3NyyTHYSR35SevJ6mZ1nWwJafKtiQbqRTIKSRcw3Ma3acqgsent3RRDqeVwpHntMk+9irg==
   dependencies:
     undici-types "~5.26.4"
 
@@ -1476,9 +1476,9 @@ gaxios@^6.0.0, gaxios@^6.0.3:
     node-fetch "^2.6.9"
 
 gcp-metadata@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.yarnpkg.com/gcp-metadata/-/gcp-metadata-6.0.0.tgz#2ae12008bef8caa8726cba31fd0a641ebad5fb56"
-  integrity sha512-Ozxyi23/1Ar51wjUT2RDklK+3HxqDr8TLBNK8rBBFQ7T85iIGnXnVusauj06QyqCXRFZig8LZC+TUddWbndlpQ==
+  version "6.1.0"
+  resolved "https://registry.yarnpkg.com/gcp-metadata/-/gcp-metadata-6.1.0.tgz#9b0dd2b2445258e7597f2024332d20611cbd6b8c"
+  integrity sha512-Jh/AIwwgaxan+7ZUUmRLCjtchyDiqh4KjBJ5tW3plBZb5iL/BPcso8A5DlzeD9qlw0duCamnNdpFjxwaT0KyKg==
   dependencies:
     gaxios "^6.0.0"
     json-bigint "^1.0.0"
@@ -1696,9 +1696,9 @@ https-proxy-agent@^7.0.1:
     debug "4"
 
 ignore@^5.0.5, ignore@^5.2.0:
-  version "5.2.4"
-  resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.4.tgz#a291c0c6178ff1b960befe47fcdec301674a6324"
-  integrity sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==
+  version "5.3.0"
+  resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.3.0.tgz#67418ae40d34d6999c95ff56016759c718c82f78"
+  integrity sha512-g7dmpshy+gD7mh88OC9NwSGTKoc3kyLAZQRU1mt53Aw/vnvfXnbC+F/7F7QoYVKbV+KNvJx8wArewKy1vXMtlg==
 
 import-fresh@^3.2.1:
   version "3.3.0"
@@ -2138,11 +2138,9 @@ lru-cache@^6.0.0:
     yallist "^4.0.0"
 
 "lru-cache@^9.1.1 || ^10.0.0":
-  version "10.0.2"
-  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.0.2.tgz#34504678cc3266b09b8dfd6fab4e1515258271b7"
-  integrity sha512-Yj9mA8fPiVgOUpByoTZO5pNrcl5Yk37FcSHsUINpAsaBIEZIuqcCclDZJCVxqQShDsmYX8QG63svJiTbOATZwg==
-  dependencies:
-    semver "^7.3.5"
+  version "10.0.3"
+  resolved "https://registry.yarnpkg.com/lru-cache/-/lru-cache-10.0.3.tgz#b40014d7d2d16d94130b87297a04a1f24874ae7c"
+  integrity sha512-B7gr+F6MkqB3uzINHXNctGieGsRTMwIBgxkp0yq/5BwcuDzD4A8wQpHQW6vDAm1uKSLQghmRdD9sKqf2vJ1cEg==
 
 memorystream@^0.3.1:
   version "0.3.1"
@@ -2618,7 +2616,7 @@ semver@^6.3.1:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-semver@^7.3.5, semver@^7.3.7:
+semver@^7.3.7:
   version "7.5.4"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.5.4.tgz#483986ec4ed38e1c6c48c34894a9182dbff68a6e"
   integrity sha512-1bCSESV6Pv+i21Hvpxp3Dx+pSD8lIPt8uVjRrxAUt/nbswYc+tK6Y2btiULjd4+fnq15PX+nqQDC7Oft7WkwcA==
@@ -2731,7 +2729,6 @@ stack-utils@^2.0.3:
     escape-string-regexp "^2.0.0"
 
 "string-width-cjs@npm:string-width@^4.2.0", string-width@^4.1.0:
-  name string-width-cjs
   version "4.2.3"
   resolved "https://registry.yarnpkg.com/string-width/-/string-width-4.2.3.tgz#269c7117d27b05ad2e536830a8ec895ef9c6d010"
   integrity sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==
