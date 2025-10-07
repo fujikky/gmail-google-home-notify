@@ -23,7 +23,7 @@
     "google-auth-library": "^10.0.0",
     "google-home-player": "^2.0.0",
     "googleapis": "^161.0.0",
-    "ping": "^0.4.2"
+    "ping": "^1.0.0"
   },
   "devDependencies": {
     "@tsconfig/node16-strictest": "1.0.4",
