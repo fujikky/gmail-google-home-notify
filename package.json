@@ -22,7 +22,7 @@
   "dependencies": {
     "google-auth-library": "^11.0.0",
     "google-home-player": "^2.0.0",
-    "googleapis": "^175.0.0",
+    "googleapis": "^176.0.0",
     "ping": "^1.0.0"
   },
   "devDependencies": {
