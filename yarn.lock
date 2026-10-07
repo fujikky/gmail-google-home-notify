@@ -1714,10 +1714,10 @@ googleapis-common@^9.0.0:
     qs "^6.7.0"
     url-template "^2.0.8"
 
-googleapis@^183.0.0:
-  version "183.0.0"
-  resolved "https://registry.yarnpkg.com/googleapis/-/googleapis-183.0.0.tgz#d17387c7beeea49721ae83ce27501b18bdcf78e6"
-  integrity sha512-Aa0KKctjSDfRrvKHFU6PtPYP9yBC/aOUmuc1VpIjJUrHtfoHz3n8/apLB7t4e3d8NbhTDF1x6JcZJO1au7VNHQ==
+googleapis@^184.0.0:
+  version "184.0.0"
+  resolved "https://registry.yarnpkg.com/googleapis/-/googleapis-184.0.0.tgz#e1b9c0be948a1425dd212208db88bef491798488"
+  integrity sha512-idQwo/hxlV32JyCZpApc/w8dz9pQLQhk/x370VfReimW4TzMqvcVE6DP13Vn1SnW7BEJcnJ7TLaWbWv91mhz2w==
   dependencies:
     google-auth-library "^11.0.0"
     googleapis-common "^9.0.0"
