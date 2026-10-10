@@ -389,10 +389,12 @@
   dependencies:
     undici-types "~6.21.0"
 
-"@types/ping@0.4.4":
-  version "0.4.4"
-  resolved "https://registry.yarnpkg.com/@types/ping/-/ping-0.4.4.tgz#ec45bd022f40949fe8eaf76778a704f73d0be72c"
-  integrity sha512-ifvo6w2f5eJYlXm+HiVx67iJe8WZp87sfa683nlqED5Vnt9Z93onkokNoWqOG21EaE8fMxyKPobE+mkPEyxsdw==
+"@types/ping@1.0.0":
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/@types/ping/-/ping-1.0.0.tgz#5f341509579441f7b5fa7835737b4f38ec47ffe8"
+  integrity sha512-JKclwsbs56DKQ3OBxxcup1QfiaFNA/rMO5DAdsldbA3QZu+E4NhwJrNzw5omjNk0UR2XObGSppARkVHuKPobDQ==
+  dependencies:
+    ping "*"
 
 "@types/semver@^7.3.12":
   version "7.8.0"
@@ -2526,7 +2528,7 @@ pidtree@^1.0.0:
   resolved "https://registry.yarnpkg.com/pidtree/-/pidtree-1.0.0.tgz#55a9b149ba64519a8b46781165a122a34f4a6d31"
   integrity sha512-avfAvjB9Dd0wdj3rjJX//yS+G79OO0KrS5pJHFJENjYGX6N4SMgEDBBI/yFy0lloOYSaC6XQxzpOAMPfSYFV/Q==
 
-ping@^1.0.0:
+ping@*, ping@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/ping/-/ping-1.0.0.tgz#5347397c356d44778e8261194de6dbcc2c3db0c4"
   integrity sha512-3dxdgGtV+7P/EVo42JhkGSomeO/0GGicSz3mI/yK+AI+VGNAOfakw5XfcbGI4IjyBY+ZZwvuRXdhnNF2uliKew==
